@@ -1,6 +1,7 @@
 ⚽ Premier League Estatísticas - Projeto FullStack
 
 Este projeto é um ecossistema completo para gerenciamento e análise de estatísticas de jogadores da Premier League. Ele permite o controle total de um elenco (CRUD), monitorando métricas reais de desempenho.
+---
 
 🚀 Tecnologias e Arquitetura
 
