@@ -61,5 +61,8 @@ Navegue até a pasta /react.
 Crie um arquivo .env com a URL da API: REACT_APP_API_URL=http://localhost:8080/api/v1/jogadores.
 
 Execute: npm install e npm start.
-
-Desenvolvido por Lucas Viana da Silva
+## 🤝 Contribuição
+Pull requests são bem-vindos!
+Se tiver sugestões de melhorias ou quiser colaborar, bora fazer acontecer. 🚀
+---
+## 💜 Feito com amor por [LucasViana4555](https://github.com/LucasViana4555)
