@@ -1,0 +1,65 @@
+/*layout geral*/
+body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; }
+.container { padding: 40px; max-width: 1400px; margin: auto; }
+
+/*header*/
+.header-wrapper { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.header h1 { color: #38003c; border-left: 10px solid #00ff85; padding-left: 15px; margin: 0; }
+
+/*botão principal */
+.btn-add-main {
+    background-color: #00ff85;
+    color: #38003c;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-add-main:hover { transform: translateY(-2px); background-color: #02d16f; }
+.btn-add-main.active { background-color: #ff005a; color: white; }
+
+/*formulario p/ criar jogador*/
+.add-form-container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #38003c;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.add-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 15px;
+    align-items: flex-end;
+}
+.add-form-grid .form-field:nth-child(1), .add-form-grid .form-field:nth-child(3) { grid-column: span 2; }
+
+.form-field { display: flex; flex-direction: column; gap: 8px; }
+.form-field label { font-size: 0.7rem; font-weight: bold; color: #38003c; text-transform: uppercase; }
+.add-form-grid input, .add-form-grid select {
+    height: 40px; padding: 0 10px; border: 1px solid #ccc; border-radius: 6px; background-color: #f9f9f9; box-sizing: border-box; font-size: 0.9rem;
+}
+.btn-save { background-color: #00ff85; color: #38003c; height: 40px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+
+.filter-bar { display: flex; gap: 15px; background: #38003c; padding: 25px; border-radius: 12px; margin-bottom: 30px; align-items: flex-end; color: white; }
+.filter-group { display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.filter-group label { font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: #00ff85; }
+.filter-group select, .filter-group input { height: 45px; padding: 0 12px; border-radius: 6px; border: none; font-size: 1rem; width: 100%; box-sizing: border-box; }
+.filter-actions { display: flex; gap: 12px; align-items: flex-end; }
+.btn-search { background: #00ff85; color: #38003c; height: 45px; padding: 0 25px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+.btn-clear { background-color: #00ff85; color: #38003c; border: none; height: 45px; padding: 0 20px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; white-space: nowrap; text-transform: uppercase; font-size: 0.8rem; }
+.btn-clear:hover { background-color: #ff005a !important; color: #38003c; box-shadow: 0 4px 12px rgba(255, 0, 90, 0.3); }
+
+.table-wrapper { box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 12px; overflow-x: auto; background: white; }
+.fl-table { width: 100%; border-collapse: collapse; min-width: 1200px; }
+.fl-table th { background: #38003c; color: white; padding: 15px 5px; font-size: 0.8rem; text-transform: uppercase; }
+.fl-table td { padding: 12px 5px; border-bottom: 1px solid #eee; text-align: center; font-size: 0.85rem; min-width: 50px; }
+.fl-table th:first-child, .fl-table td:first-child { position: sticky; left: 0; z-index: 2; text-align: left; padding-left: 20px; min-width: 160px; }
+.fl-table td:first-child { background: white; border-right: 2px solid #eee; font-weight: 600; color: #38003c; }
+.goals { font-weight: bold; color: #0077ff; }
+.actions-cell { display: flex; justify-content: center; gap: 8px; min-width: 150px !important; }
+.btn-edit { background-color: #38003c; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; transition: 0.2s; }
+.btn-delete { background-color: #ff005a; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; transition: 0.2s; }
