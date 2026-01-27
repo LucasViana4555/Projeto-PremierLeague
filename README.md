@@ -1,9 +1,9 @@
-⚽ Premier League Estatísticas - Projeto FullStack
+# ⚽ Premier League Estatísticas - Projeto FullStack
 
 Este projeto é um ecossistema completo para gerenciamento e análise de estatísticas de jogadores da Premier League. Ele permite o controle total de um elenco (CRUD), monitorando métricas reais de desempenho.
 ---
 
-🚀 Tecnologias e Arquitetura
+## 🚀 Tecnologias e Arquitetura
 
 O sistema foi construído utilizando práticas modernas de desenvolvimento voltadas para escalabilidade e manutenção:
 
@@ -27,15 +27,19 @@ Banco de Dados (PostgreSQL)
 
 Persistência Relacional: Armazenamento robusto e permanente das métricas dos atletas.
 
-🛠️ Funcionalidades Principais
+---
+
+## 🛠️ Funcionalidades Principais
 
 Gestão de Estatísticas Avançadas: Cadastro e edição de métricas como Gols Esperados (xG), Assistências Esperadas (xAG), minutos jogados e cartões.
 
 Filtros Acumulativos: Busca inteligente por Nome, Time, Posição e Nacionalidade.
 
-Tradução de UX: Interface totalmente adaptada com termos esportivos em português (ex: GK -> GOL, FW -> ATA).
+Interface Visual Ideal: Design limpo e intuitivo, e bandeiras nacionais para identificar os jogadores instantaneamente.
 
-🏁 Como Executar o Projeto
+---
+
+## 🏁 Como Executar o Projeto
 
 1. Banco de Dados
 Certifique-se de ter o PostgreSQL instalado.
