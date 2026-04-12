@@ -1,5 +1,10 @@
 /*layout geral*/
-body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; }
+body { 
+    background: linear-gradient(135deg, #edfdf4 0%, #d5f5e3 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+}
 .container { padding: 40px; max-width: 1400px; margin: auto; }
 
 /*header*/
@@ -50,7 +55,7 @@ body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verda
 .filter-group select, .filter-group input { height: 45px; padding: 0 12px; border-radius: 6px; border: none; font-size: 1rem; width: 100%; box-sizing: border-box; }
 .filter-actions { display: flex; gap: 12px; align-items: flex-end; }
 .btn-search { background: #00ff85; color: #38003c; height: 45px; padding: 0 25px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.3s; }
-.btn-clear { background-color: #00ff85; color: #38003c; border: none; height: 45px; padding: 0 20px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; white-space: nowrap; text-transform: uppercase; font-size: 0.8rem; }
+.btn-clear { background-color: #00ff85; color: #38003c; border: none; height: 45px; padding: 0 20px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; white-space: nowrap; font-size: 0.8rem; }
 .btn-clear:hover { background-color: #ff005a !important; color: #38003c; box-shadow: 0 4px 12px rgba(255, 0, 90, 0.3); }
 
 .table-wrapper { box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 12px; overflow-x: auto; background: white; }
@@ -63,3 +68,159 @@ body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verda
 .actions-cell { display: flex; justify-content: center; gap: 8px; min-width: 150px !important; }
 .btn-edit { background-color: #38003c; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; transition: 0.2s; }
 .btn-delete { background-color: #ff005a; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; transition: 0.2s; }
+
+/* --- Landing Page (Home) Styles --- */
+.home-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.mancity.com/meta/media/d4boprad/erling-haaland-elec-blue.png') no-repeat 90% bottom,
+                radial-gradient(circle at center, #00ff85 0%, #00c466 100%);
+    background-size: auto 90%, cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #38003c;
+    z-index: 1000;
+    padding-left: 5%;
+    box-sizing: border-box;
+}
+
+.home-content {
+    text-align: center;
+    max-width: 600px;
+    padding: 40px;
+    animation: slideUp 0.8s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.premier-logo { width: 160px; margin-bottom: 20px; animation: float 3s ease-in-out infinite; drop-shadow: 0 10px 15px rgba(0,0,0,0.2); }
+
+.home-title {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+.home-title .highlight {
+    color: white;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.home-subtitle {
+    font-size: 1.3rem;
+    color: #38003c;
+    margin-bottom: 50px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.btn-enter {
+    background-color: #38003c;
+    color: #00ff85;
+    padding: 20px 60px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(56, 0, 60, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-enter:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(56, 0, 60, 0.5);
+    background-color: #1a001c;
+}
+
+@keyframes slideUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+.btn-back-home { background: transparent; border: 2px solid #38003c; color: #38003c; width: 40px; height: 40px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.2s; margin-right: 15px; }
+.btn-back-home:hover { background-color: #38003c; color: white; }
+
+.home-footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.9rem;
+    color: #38003c;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+/* --- Dark Theme --- */
+body.dark-theme { background: #121212; color: #f0f0f0; }
+body.dark-theme .header h1 { color: #00ff85; }
+body.dark-theme .add-form-container { background: #1e1e1e; border-color: #00ff85; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+body.dark-theme .form-field label { color: #00ff85; }
+body.dark-theme .add-form-grid input, body.dark-theme .add-form-grid select { background-color: #2d2d2d; color: white; border-color: #444; }
+body.dark-theme .table-wrapper { background: #1e1e1e; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+body.dark-theme .fl-table td { border-bottom: 1px solid #333; color: #f0f0f0; }
+body.dark-theme .fl-table td:first-child { background: #1e1e1e; border-right: 2px solid #333; color: #00ff85; }
+body.dark-theme .btn-back-home { border-color: #00ff85; color: #00ff85; }
+body.dark-theme .btn-back-home:hover { background-color: #00ff85; color: #121212; }
+
+
+/* Theme Switcher Toggle */
+.theme-switch-wrapper {
+  position: relative;
+  width: 64px;
+  height: 34px;
+  display: inline-block;
+}
+
+.theme-switch-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #e0e0e0;
+  transition: 0.4s cubic-bezier(1, 0, 0, 1);
+  border-radius: 34px;
+  border: 2px solid #38003c;
+  box-sizing: border-box;
+}
+
+body.dark-theme .theme-switch-slider {
+  background-color: #1e1e1e;
+  border-color: #00ff85;
+}
+
+.theme-switch-thumb {
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s cubic-bezier(1, 0, 0, 1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+body.dark-theme .theme-switch-thumb {
+  background-color: #121212;
+  box-shadow: 0 2px 4px rgba(0,255,133,0.2);
+}
+
+.theme-switch-input:checked + .theme-switch-slider .theme-switch-thumb {
+  transform: translateX(30px);
+}
