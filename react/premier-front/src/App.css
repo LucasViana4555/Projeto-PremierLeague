@@ -275,21 +275,37 @@ body.dark-theme .theme-switch-thumb {
         background-size: auto 60%, cover;
     }
     .home-content {
-        padding: 25px;
-        background: rgba(255, 255, 255, 0.6);
-        backdrop-filter: blur(12px);
-        border-radius: 20px;
-        border: 2px solid rgba(255,255,255,0.4);
-        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        padding: 15px;
+        background: transparent;
+        backdrop-filter: none;
+        border: none;
+        box-shadow: none;
     }
     body.dark-theme .home-content {
-        background: rgba(18, 18, 18, 0.6);
-        border: 1px solid rgba(0, 255, 133, 0.3);
+        background: transparent;
+        border: none;
     }
     
-    .premier-logo { width: 110px; margin-bottom: 15px; }
-    .home-title { font-size: 2.8rem; margin-bottom: 15px; }
-    .home-subtitle { font-size: 1rem; margin-bottom: 25px; }
+    .premier-logo { width: 100px; margin-bottom: 5px; }
+    
+    .home-title { 
+        font-size: 2.8rem; 
+        margin-bottom: 10px; 
+        text-shadow: 0 4px 15px rgba(255,255,255,1); 
+    }
+    body.dark-theme .home-title { 
+        text-shadow: 0 4px 15px rgba(0,0,0,1); 
+    }
+    
+    .home-subtitle { 
+        font-size: 1.05rem; 
+        margin-bottom: 20px; 
+        text-shadow: 0 2px 10px rgba(255,255,255,1); 
+        font-weight: 700;
+    }
+    body.dark-theme .home-subtitle {
+        text-shadow: 0 2px 10px rgba(0,0,0,1);
+    }
     
     .btn-enter {
         width: 100%;
