@@ -224,3 +224,83 @@ body.dark-theme .theme-switch-thumb {
 .theme-switch-input:checked + .theme-switch-slider .theme-switch-thumb {
   transform: translateX(30px);
 }
+
+/* ================================ */
+/*       RESPONSIVE MOBILE UI       */
+/* ================================ */
+@media (max-width: 768px) {
+    .container { padding: 15px; }
+    
+    /* Header Stack */
+    .header-wrapper {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    .header h1 {
+        font-size: 1.3rem;
+        border-left-width: 5px;
+        padding-left: 10px;
+    }
+    
+    /* Formulario de Novo Jogador (1 coluna) */
+    .add-form-grid { grid-template-columns: 1fr; }
+    .add-form-grid .form-field:nth-child(1), .add-form-grid .form-field:nth-child(3) { 
+        grid-column: span 1; 
+    }
+    
+    /* Barra de filtros (Stacking) */
+    .filter-bar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    .filter-group, .filter-actions {
+        width: 100%;
+    }
+    .filter-actions {
+        justify-content: space-between;
+    }
+    .filter-actions button {
+        flex: 1;
+        text-align: center;
+    }
+    
+    /* Landing Page (Mobile First Premium Design) */
+    .home-container {
+        padding: 20px;
+        padding-top: 50px;
+        align-items: flex-start; /* Texto no topo, imagem no fundo */
+        background-position: center bottom;
+        background-size: auto 60%, cover;
+    }
+    .home-content {
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        border: 2px solid rgba(255,255,255,0.4);
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    body.dark-theme .home-content {
+        background: rgba(18, 18, 18, 0.6);
+        border: 1px solid rgba(0, 255, 133, 0.3);
+    }
+    
+    .premier-logo { width: 110px; margin-bottom: 15px; }
+    .home-title { font-size: 2.8rem; margin-bottom: 15px; }
+    .home-subtitle { font-size: 1rem; margin-bottom: 25px; }
+    
+    .btn-enter {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+
+    .home-footer {
+        width: 100%;
+        text-align: center;
+        left: 0;
+        bottom: 15px;
+    }
+}
